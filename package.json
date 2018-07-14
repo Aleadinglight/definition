@@ -9,6 +9,7 @@
   "author": "TamNguyen",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "unirest": "^0.5.1"
   }
 }
