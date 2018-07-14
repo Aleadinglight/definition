@@ -4,16 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "TamNguyen",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
     "express": "^4.16.3",
     "unirest": "^0.5.1"
-=======
-    "express": "^4.16.3"
->>>>>>> 9e615a0fde1b6132a2f92cb82bf535f395d004c7
   }
 }
