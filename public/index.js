@@ -5,9 +5,10 @@ var result = new Vue({
     },
     methods:{
         findDef: function(){
-          $.post( "/search", { name: this.message })
+          var m=this.message
+          $.post( "/search", { name: m })
             .done(function( data ){
-
+              console.log(data);
           });
         }
     }

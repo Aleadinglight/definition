@@ -26,13 +26,13 @@ function searchWord(word){
 }
 module.exports = searchWord;
 
-app.get('/', (req, res) => {
-	console.log("req="+req);
+app.get('/', (req, res) => {	
 	res.sendFile(path.join(__dirname + './index.html'));
 });
 
 app.post('/search', (req, res) => {
-	res.send(req);
+	
+	res.send(req.query.name);
 });
 
 const port = process.env.PORT || 3000;
