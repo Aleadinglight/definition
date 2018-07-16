@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web Speech API Demo</title>
+  <title>Definition</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
@@ -18,11 +19,15 @@
 </head>
  
 <body>
-    <div class="container" >
-        
-        <div id="result">
+    <div class="top"></div>
+    <div class="container " >
+        <div id="result" class="d-flex justify-content-center">
             <input v-model="message" placeholder="edit me">
+            <button v-on:click="findDef">
+                    Search
+            </button>
         </div>
+        <router-link to="/foo" id="app">Go to Foo</router-link>
     </div>
     <script src="index.js"></script>
 
