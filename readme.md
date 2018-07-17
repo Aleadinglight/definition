@@ -5,7 +5,8 @@ Getting the definition of a word. Using `Node.js` and `Vue 2.0`.
 ## Requirements
 
 - Google Chrome
-- Node.js
+- Node.js Express Framework
+- jQuery AJAX
 - [Wordapi's API key](https://www.wordsapi.com/)
 
 ## How to use
