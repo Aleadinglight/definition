@@ -20,14 +20,16 @@
  
 <body>
     <div class="top"></div>
-    <div class="container " >
-        <div id="result" class="d-flex justify-content-center">
+    <div class="container" id="result">
+        <div class="d-flex justify-content-center">
             <input v-model="message" placeholder="edit me">
             <button v-on:click="findDef">
                     Search
             </button>
         </div>
-        <router-link to="/foo" id="app">Go to Foo</router-link>
+        <div>
+            {{ returnMessage }}
+        </div>
     </div>
     <script src="index.js"></script>
 
