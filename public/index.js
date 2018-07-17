@@ -5,8 +5,7 @@ var result = new Vue({
     },
     methods:{
         findDef: function(){
-          var m=this.message
-          $.post( "/search", { name: m })
+          $.get( "/search", { name: this.message })
             .done(function( data ){
               console.log(data);
           });
