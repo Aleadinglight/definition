@@ -22,17 +22,23 @@
     <div class="top"></div>
     <div class="container" id="result">
         <div class="row d-flex justify-content-center">
-            <input v-model="message" placeholder="Enter search word.." :disabled="isDisabled"> 
-            <button v-on:click="findDef" @keydown.enter="findDef" :disabled="isDisabled">
+            <input v-model="message" placeholder="Enter search word.." @keydown.enter="findDef" :disabled="isDisabled"> 
+            <button v-on:click="findDef" :disabled="isDisabled">
                     Search
             </button>
         </div>
-        <div class="row">
-            <h1>{{ returnWord }}</h1>
-        </div>
-        <div class="row pre-formatted">
-            <p class="col-lg-12">{{ returnMessage }}</p>
-        </div>
+        <transition
+            name="custom-classes-transition"
+            enter-active-class="animated fadeIn"
+            leave-active-class="animated fadeOut">
+            <div class="row" v-if="show">
+                <h1>{{ returnWord }}</h1>
+                <div class="row pre-formatted">
+                    <p class="col-lg-12">{{ returnMessage }}</p>
+                </div>
+            </div>
+            
+        </transition>
     </div>
     <script src="index.js"></script>
 

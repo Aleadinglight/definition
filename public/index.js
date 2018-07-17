@@ -4,11 +4,13 @@ var result = new Vue({
         message:"",
         returnMessage:"",
         returnWord:"",
-        isDisabled:false
+        isDisabled:false,
+        show:false
     },
     methods:{
         findDef: function(){
             result.isDisabled = true;
+            result.show=false;
             $.get( "/search", { name: this.message })
                 .done(function( data ){
                 console.log(data);
@@ -19,6 +21,7 @@ var result = new Vue({
                 });
                 result.returnMessage = m_returnMessage;
                 result.isDisabled = false;
+                result.show=true;
             });
         }
     }
