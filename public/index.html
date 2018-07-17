@@ -27,17 +27,14 @@
                     Search
             </button>
         </div>
+        <h1 v-if="show">{{ returnWord }}</h1>
         <transition
             name="custom-classes-transition"
             enter-active-class="animated fadeIn"
             leave-active-class="animated fadeOut">
-            <div class="row" v-if="show">
-                <h1>{{ returnWord }}</h1>
-                <div class="row pre-formatted">
+                <div class=" pre-formatted" v-if="show">
                     <p class="col-lg-12">{{ returnMessage }}</p>
                 </div>
-            </div>
-            
         </transition>
     </div>
     <script src="index.js"></script>
