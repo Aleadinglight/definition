@@ -21,8 +21,8 @@ npm start
 
 Successful result:
 
-<img src="https://github.com/Aleadinglight/definition/blob/master/pics/good.png" width="500">
+<img src="https://github.com/Aleadinglight/definition/blob/master/pics/good.png" width="700">
 
 Bad result:
 
-<img src="https://github.com/Aleadinglight/definition/blob/master/pics/bad.png" width="500">
+<img src="https://github.com/Aleadinglight/definition/blob/master/pics/bad.png" width="700">
