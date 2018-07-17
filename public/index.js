@@ -2,19 +2,24 @@ var result = new Vue({
     el:'#result',
     data: {
         message:"",
-        returnMessage:""
+        returnMessage:"",
+        returnWord:"",
+        isDisabled:false
     },
     methods:{
         findDef: function(){
-          $.get( "/search", { name: this.message })
-            .done(function( data ){
-              console.log(data);
-              var m_returnMessage = data.word.bold()+"\n";
-              data.definitions.forEach(function(element,i){
-                m_returnMessage+=(i+1)+". "+element.definition+"\n";
-              });
-              result.returnMessage = m_returnMessage;
-          });
+            result.isDisabled = true;
+            $.get( "/search", { name: this.message })
+                .done(function( data ){
+                console.log(data);
+                result.returnWord=data.word.charAt(0).toUpperCase()+data.word.slice(1);
+                var m_returnMessage =" \n";
+                data.definitions.forEach(function(element,i){
+                    m_returnMessage+=(i+1)+". "+element.definition+"\n";
+                });
+                result.returnMessage = m_returnMessage;
+                result.isDisabled = false;
+            });
         }
     }
 });

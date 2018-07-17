@@ -1,5 +1,10 @@
+.html,body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .container{
     height: 80vh;
+    width: 100%;
 }
 
 .top{
@@ -8,4 +13,6 @@
 
 .pre-formatted {
     white-space: pre;
+    text-align: left;
+    overflow: scroll;
 }

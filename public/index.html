@@ -21,14 +21,17 @@
 <body>
     <div class="top"></div>
     <div class="container" id="result">
-        <div class="d-flex justify-content-center">
-            <input v-model="message" placeholder="edit me">
-            <button v-on:click="findDef">
+        <div class="row d-flex justify-content-center">
+            <input v-model="message" placeholder="Enter search word.." :disabled="isDisabled"> 
+            <button v-on:click="findDef" @keydown.enter="findDef" :disabled="isDisabled">
                     Search
             </button>
         </div>
-        <div class="pre-formatted">
-            {{ returnMessage }}
+        <div class="row">
+            <h1>{{ returnWord }}</h1>
+        </div>
+        <div class="row pre-formatted">
+            <p class="col-lg-12">{{ returnMessage }}</p>
         </div>
     </div>
     <script src="index.js"></script>
