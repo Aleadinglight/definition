@@ -9,8 +9,11 @@ var result = new Vue({
           $.get( "/search", { name: this.message })
             .done(function( data ){
               console.log(data);
-              console.log(JSON.stringify(data));
-              this.returnMessage = JSON.stringify(data);
+              var m_returnMessage = data.word.bold()+"\n";
+              data.definitions.forEach(function(element,i){
+                m_returnMessage+=(i+1)+". "+element.definition+"\n";
+              });
+              result.returnMessage = m_returnMessage;
           });
         }
     }

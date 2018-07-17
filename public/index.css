@@ -5,3 +5,7 @@
 .top{
     height: 20vh;
 }
+
+.pre-formatted {
+    white-space: pre;
+}
