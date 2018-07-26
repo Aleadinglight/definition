@@ -1,6 +1,6 @@
 # Definition
 
-Getting the definition of a word. Using `Node.js` and `Vue 2.0`. 
+Getting the definition of a word. Handle request and API key for user. Using `Node.js` and `Vue 2.0`. 
 
 ## Requirements
 
